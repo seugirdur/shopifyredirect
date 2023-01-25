@@ -26,4 +26,4 @@ app.post("/", async (req, res) => {
     res.send('welcome, ' + req.body.username)
   })
 
-app.listen(8080);
+app.listen(process.env.PORT || 3003);
