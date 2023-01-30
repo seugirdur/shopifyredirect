@@ -9,14 +9,18 @@ app.use(bodyParser.json())
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
-app.post("/", async (req, res) => {
+app.post("/",  bodyParser.text({type: '*/*'}), async function(req, res) {
     try {
   
       console.log(req.body);
+
+      const lmao = JSON.parse(req.body)
+      // JSON.stringify(req.body)
+
       // res.status(200).json({
       //   teste: "teste",
       // });
-      res.send(req.body)
+      res.send(lmao)
     } catch (err) {
       console.log("erro: => " + err);
     }
