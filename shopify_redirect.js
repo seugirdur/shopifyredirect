@@ -96,7 +96,7 @@ async function clearCart() {
 async function createCheckout(cart) {
     return new Promise((resolve, reject) => {
         fetch(`https://shopifyredirect-production.up.railway.app`, {
-            body: JSON.stringify(cart),
+            body: cart,
             method: "post",
             headers: {
                 'Content-type': 'application/json'
