@@ -20,7 +20,8 @@ app.post("/",  bodyParser.text({type: '*/*'}), async function(req, res) {
   
       console.log(req.body);
 
-      const lmao = JSON.parse(req.body)
+      // const lmao = JSON.parse(req.body)
+      const lmao = req.body
       // JSON.stringify(req.body)
 
       // res.status(200).json({
