@@ -43,4 +43,4 @@ app.post("/",  bodyParser.text({type: '*/*'}), async function(req, res) {
     res.send('welcome, ' + req.body.username)
   })
 
-app.listen(process.env.PORT || 3333);
+app.listen(8080);
