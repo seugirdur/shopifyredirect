@@ -15,6 +15,12 @@ app.use(cors())
 
 
 
+app.get("/", async function(req, res) {
+res.send("Hello World");
+})
+
+
+
 app.post("/",  bodyParser.text({type: '*/*'}), async function(req, res) {
     try {
   
